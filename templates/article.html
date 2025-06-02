@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">{{ article.title }}</h3>
+      <h6 class="text-muted">By {{ article.author }} | {{ article.publish_date }}</h6>
+      <hr>
+      <p class="card-text" style="white-space: pre-wrap;">{{ article.content }}</p>
+      <a href="{{ url_for('home') }}" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+  </div>
+{% endblock %}
+{% block scripts %}
+  <script>
+    // Optional: Add any specific scripts for this page
+    document.addEventListener("DOMContentLoaded", function () {
+      // Custom JS can go here
+    });
+  </script>
+{% endblock %}
